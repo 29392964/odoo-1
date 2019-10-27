@@ -36,7 +36,7 @@ RUN set -x; \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* odoo.deb \ 
-        && pip install pycrypto
+        && pip install pycrypto cachetools comtypes unoconv
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
